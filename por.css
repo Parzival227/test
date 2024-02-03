@@ -1,0 +1,98 @@
+*{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(imageh/pexels-mohamed-almari-1485894.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: roboto, sans-serif;
+    background-position: center;
+}
+
+/* Header */
+.navbar {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-inline: 20px;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.navbar .menu a {
+    color: white;
+    text-shadow: 0 2px 2px black;
+}
+.project {
+    color: white;
+    font: italic 500 1.5em rubik,arial;
+}
+.project:hover {
+    text-shadow: 0 0 2px white, 0 2px 2px black;
+}
+.menu {
+    position:absolute;
+    left: 35%;
+}
+.menu ul {
+    display: flex;
+}
+.menu ul li {
+    margin-inline: 25px;
+    padding-block: 5px;
+    transition: all 0.2s ease;
+}
+.menu ul li.active a {
+    color: coral;
+    text-shadow: 0 0 4px coral,0 2px 2px black;
+}
+.menu ul li:hover {
+    transform: translateY(-5px);
+    padding-block: 5px;
+}
+
+.menutel {
+    display: none;
+    position: absolute;
+    color: white;
+    width: 30px;
+    right: 15px;
+}
+
+
+@media screen and (max-width: 575px) {
+    .menu {
+        position: absolute;
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.575);
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(3px);
+        margin-left: 100%;
+        transition: margin-left 0.5s ease;
+    }
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .menu ul li {
+        font-size: 1.2em;
+        margin-block: 10px;
+    }
+    .menutel {
+        display: block;
+    }
+    .menu_mobile {
+        margin-left: 0;
+    }
+}
